@@ -1,0 +1,61 @@
+Observations: 80 (2005-01-01 to 2024-10-01)
+
+=== Full sample ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               d_unrate   R-squared:                       0.795
+Model:                            OLS   Adj. R-squared:                  0.792
+Method:                 Least Squares   F-statistic:                     301.6
+Date:                Fri, 02 Oct 2026   Prob (F-statistic):           1.59e-28
+Time:                        16:07:55   Log-Likelihood:                -64.588
+No. Observations:                  80   AIC:                             133.2
+Df Residuals:                      78   BIC:                             137.9
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.3894      0.066      5.925      0.000       0.259       0.520
+gdp_growth    -0.7727      0.044    -17.366      0.000      -0.861      -0.684
+==============================================================================
+Omnibus:                       33.665   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              183.678
+Skew:                           1.029   Prob(JB):                     1.30e-40
+Kurtosis:                      10.132   Cond. No.                         1.72
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Without 2020 Q2 and Q3 ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               d_unrate   R-squared:                       0.289
+Model:                            OLS   Adj. R-squared:                  0.280
+Method:                 Least Squares   F-statistic:                     30.96
+Date:                Fri, 02 Oct 2026   Prob (F-statistic):           3.77e-07
+Time:                        16:07:55   Log-Likelihood:                -25.694
+No. Observations:                  78   AIC:                             55.39
+Df Residuals:                      76   BIC:                             60.10
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.1083      0.051      2.108      0.038       0.006       0.211
+gdp_growth    -0.3494      0.063     -5.564      0.000      -0.474      -0.224
+==============================================================================
+Omnibus:                       44.256   Durbin-Watson:                   1.317
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              258.606
+Skew:                          -1.500   Prob(JB):                     6.99e-57
+Kurtosis:                      11.401   Cond. No.                         2.28
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Comparison ===
+Full sample    slope = -0.773, p-value = 0.0000, R-squared = 0.795, N = 80
+Without COVID  slope = -0.349, p-value = 0.0000, R-squared = 0.289, N = 78
+
+Saved scatter plot to okun_scatter.png
